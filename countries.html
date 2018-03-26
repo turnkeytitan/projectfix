@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>RISK FIX</title>
+  <base id="base" runat="server" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="less/slider.less">
+  <link rel="stylesheet" href="css/ihover.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimun-scalable=1.0">
+</head>
+
+<body>
+  <style>
+  .divWaiting {
+    position: absolute;
+    background-color: #FAFAFA;
+    z-index: 2147483647 !important;
+    opacity: 0.8;
+    overflow: hidden;
+    text-align: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 20%;
+  }
+  </style>
+  <form id="form1">
+    <div>
+      <header class="barraup">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-xs-12">
+              <div class="">
+                <nav>
+                  <ul class="nav1">
+                    <li><a href="#"><i class="fa fa-globe"></i> Español <i class="fa fa-angle-down"></i></a>
+                      <ul>
+                        <li><a href="#">English</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <!-- .menu list -->
+                </nav>
+              </div>
+            </div>
+            <div class="col-md-1 col-xs-4 flotarder padding1"><a href="/Register/" title="Login" Id="aLogin" runat="server">Login</a></div>
+          </div>
+        </div>
+    </div>
+    </header>
+    <header class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="col-md-3 col-sm-4 col-xs-8">
+            <a href="/Home/">  <img src="img/logo.jpg" alt="Risk Fix"></a></div>
+          <div class="col-xs-12 col-sm-8 col-md-5">
+            <div class="option-search-bar">
+              <div class="input-group">
+                <input name="Encabezado$TxBuscar" type="text" onchange="javascript:setTimeout('__doPostBack(\'Encabezado$TxBuscar\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="Encabezado_TxBuscar" class="form-control" placeholder="Search..."><span class="input-group-btn"> <button class="btn" type="button" id="Buscar"><i class="fa fa-search"></i></button> </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-5 col-xs-8">
+            <a href="http://www.gggi.org" target="_blank" title="GGGI"><img src="img/logos.jpg" alt="GGGI"> </a>
+          </div>
+          <div class="menu_bar">
+            <button type="button" class="navbar-toggle1 collapsed" data-toggle="collapse" data-target="#navbar-1">
+              <span class="sr-only">Menú</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 header-nav animate-dropdown">
+            <div class="menu collapse navbar-collapse nav" id="navbar-1" aria-expanded="true">
+              <ul>
+                <script type="text/javascript">
+                function setActive() {
+                  aObj = document.getElementById('nav').getElementsByTagName('a');
+                  for (i = 0; i < aObj.length; i++) {
+                    if (document.location.href.indexOf(aObj[i].href) >= 0) {
+                      aObj[i].className = 'active';
+                    }
+                  }
+                }
+                window.onload = setActive;
+                </script>
+                <li><a href="ejemploindex.html" class="c1 c1active" id="aHome" runat="server">HOME<br></a>
+                  <p class="subir">|</p>
+                </li>
+                <li><a href="ejemploin.html" class="c2" id="aAbout" runat="server">ABOUT</a>
+                  <p class="subir">|</p>
+                </li>
+                <li><a href="/Instruments/" class="c3" id="aInstrumentos" runat="server">INSTRUMENTS</a>
+                  <p class="subir">|</p>
+                </li>
+                <li><a href="/Project-Submit/" class="c4" id="aProjectSubmit" runat="server"> KICK START<br>YOUR PROJECT</a>
+                  <p class="subir">|</p>
+                </li>
+                <li><a href="#leave" data-toggle="modal" class="c5">ACCESS TO<br> CLIMATE FINANCE </a>
+                  <p class="subir">|</p>
+                </li>
+                <li><a href="/Events/" class="c6" id="aEventos" runat="server">NEWS</a>
+                  <p class="subir">|</p>
+                </li>
+                <li><a href="/Contact/" class="c7" id="aContacto" runat="server">CONTACT</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- MODAL LEAVE TO PAGE -->
+    <section class="breath-cromble">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="/Home/">inicio</a> /
+            <span>Eventos</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 col-sm-12 block-conten">
+              <div class="col-xs-12 col-md-3 col-sm-3">
+                <ul class="nav nav-tabs tabs-left">
+                  <li>Countries</a>
+                    <hr>
+                  </li>
+                  <li><a href="#">México</a></li>
+                  <li><a href="#">Costa Rica</a>
+                    <li><a href="#">Colombia</a>
+                      <li><a href="#">Perú</a>
+                        <li><a href="#">Morocco</a>
+                          <li><a href="#">Senegal</a>
+                            <li><a href="#">Rwanda</a>
+                              <li><a href="#">Jordan</a>
+                                <li><a href="#">United  Arab Emirates</a>
+                                  <li><a href="#">Ethiopia</a>
+                                    <li><a href="#">India</a>
+                                      <li><a href="#">Nepal</a>
+                                        <li><a href="#">Mongolia</a>
+                                          <li><a href="#">Chinal</a>
+                                            <li><a href="#">Thailand</a>
+                                              <li><a href="#">Cambodia</a>
+                                                <li><a href="#">Vietnam</a>
+                                                  <li><a href="#">Vietnam</a>
+                                                    <li><a href="#">Philippines</a>
+                                                      <li><a href="#">Indonesia</a>
+                                                        <li><a href="#">Vanuautu</a>
+                                                          <li><a href="#">Fiji</a>
+                                                            <li><a href="#">Kiribati</a>
+                                                            </li>
+                </ul>
+              </div>
+              <!-- TABS CONTEN-->
+              <div class="col-xs-12 col-md-9 col-sm-9">
+                <!-- START TAB CONTEN FORTHCOMING EVENTS-->
+                <div class="tab-content left">
+                  <div class="tab-pane active clearfix" id="home">
+                    <div class="tittle-events">
+                      <div class="little-blocke"></div>
+                      <h2 class="tit"><strong>Colombia</strong></h2>
+                    </div>
+                    <!-- Event 1-->
+                    <div class="block-events col-md-12" style="text-align:">
+                      <img src="img/events/forth-1.jpg" class="img-responsive">
+                      <br>
+                      <p>Colombia, oficialmente República de Colombia, es un país situado en la región noroccidental de América del Sur. Está constituido en un estado unitario, social y democrático de derecho cuya forma de gobierno es presidencialista. Esta república está organizada políticamente en 32 departamentos descentralizados y el Distrito capital de Bogotá, sede del gobierno nacional</p>
+                      <a href="#"><i class="fa fa-angle-right"></i></a>
+                      <div class="heading">
+                        <div class="border-inner"></div>
+                        <div class="border-onner"></div>
+                      </div>
+                    </div>
+                    <!-- Event 1-->
+                    <!-- Event 2-->
+                    <div class="block-events col-md-6">
+                      <h4>Texto de nosotros</h4>
+                      <p style="text-align: justify;
+">Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
+                    </div>
+                    <div class="block-events col-md-6">
+                      <img src="img/events/Prev-1.png" class="img-responsive">
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <!-- END TABS CONTEN -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    </div>
+  </form>
+  <footer class="foot">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="col-md-3" style="margin-bottom: 12px;">
+            <div>
+              <a href="/Sitemap/" style="border-right: #81cf00 2px; border-right-style: solid; padding-right: 17px;margin-bottom: 69px;">Sitemap&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </div>
+            <br />
+            <div>
+              <a href="Terms-RISKFIX_18_Jan_2016.pdf" style="border-right: #81cf00 2px; border-right-style: solid; padding-right: 17px;margin-bottom: 69px;" target="_blank">Disclaimer</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <a href="#"> RiskFix</a>
+            <br>
+            <p>
+              19F Jeongdong Bldg.
+              <br> 21-15 Jeongdong-gil
+              <br> Jung-gu Seoul 04518 Republic of Korea</p>
+          </div>
+          <div class="col-md-3" style="margin-top: 39px;">
+            <p>© 2015 RISKFIX- All rights reserved </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <!-- jQuery (necessary for Bootstrap 's JavaScript plugins) -->
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Include all template custom js -->
+  <script src="js/jquery.downCount.js"></script>
+  <script src="js/bootstrap-slider.js"></script>
+  <script src="js/zabuto_calendar.min.js"></script>
+  <script src="js/ekko-lightbox.js"></script>
+  <script src="js/custom.js"></script>
+  <script>
+  if (top.location != location) {
+    top.location.href = document.location.href;
+  }
+  $(function() {
+    window.prettyPrint && prettyPrint();
+    $('#IdDvSl15').slider();
+    var RGBChange = function() {
+      $('#RGB').css('background', 'rgb(' + r.getValue() + ',' + g.getValue() + ',' + b.getValue() + ')')
+    };
+  });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>RISK FIX</title>
+  <base id="base" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="less/slider.less">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimun-scalable=1.0">
+</head>
+
+<body>
+  <style>
+  .divWaiting {
+    position: absolute;
+    background-color: #FAFAFA;
+    z-index: 2147483647 !important;
+    opacity: 0.8;
+    overflow: hidden;
+    text-align: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 20%;
+  }
+  </style>
+  <form id="form1">
+    <div>
+      <header class="barraup">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-xs-12">
+              <div class="">
+              </div>
+              <div class="col-md-1 col-xs-4 flotarder padding1"><a href="/Logout/" title="Logout" Id="aLogout" runat="server" visible="false">Salir</a><a href="/Register/" title="Login" Id="aLogin" runat="server">Login</a></div>
+              <div class="col-md-2 col-xs-8 flotarder padding1 acount"><a href="/Profile/" id="aMiCuenta" runat="server" visible="false">Mi cuenta <i class="fa fa-user"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <header class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="col-md-3 col-sm-4 col-xs-8">
+              <a href="/Home/">  <img src="img/logo.jpg" alt="Risk Fix"></a></div>
+            <div class="col-xs-12 col-sm-8 col-md-5">
+              <div class="option-search-bar">
+                <div class="input-group">
+                  <input name="Encabezado$TxBuscar" type="text" onchange="javascript:setTimeout('__doPostBack(\'Encabezado$TxBuscar\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="Encabezado_TxBuscar" class="form-control" placeholder="Search..."><span class="input-group-btn"> <button class="btn" type="button" id="Buscar"><i class="fa fa-search"></i></button> </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-5 col-xs-8">
+              <a href="http://www.gggi.org" target="_blank" title="GGGI"><img src="img/logos.jpg" alt="GGGI"> </a>
+            </div>
+            <div class="menu_bar">
+              <button type="button" class="navbar-toggle1 collapsed" data-toggle="collapse" data-target="#navbar-1">
+                <span class="sr-only">Menú</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 header-nav animate-dropdown">
+              <div class="menu collapse navbar-collapse" id="navbar-1" aria-expanded="true">
+                <ul>
+                  <li><a href="/Home/" class="c1 c1active" id="aHome" runat="server">INICIO<br> <br></a></li>
+                  <li><a href="About/" class="c2" id="aAbout" runat="server">ACERCA DE<br> <br></a></li>
+                  <li><a href="/Instruments/" class="c3" id="aInstrumentos" runat="server">INSTRUMENTOS<br> <br></a></li>
+                  <li><a href="/Project-Submit/" class="c4" id="aProjectSubmit" runat="server">ACTIVAR MI<br>PROPUESTA</a></li>
+
+                  <li><a href="/Events/" class="c6" id="aEventos" runat="server">EVENTOS<br> <br></a></li>
+                  <li><a href="/Contact/" class="c7" id="aContacto" runat="server">CONTACTO<br> <br></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- MODAL LEAVE TO PAGE -->
+      <div class="col-md-12">
+        <div class="modal fade in" id="leave" aria-hidden="false" style="display: none;">}
+          <div class="modal-dialog">
+            <div class="col-md-12">
+              <div class="modal-header">
+                <div class="col-md-12 block-pro-1">
+                  <div class="little-blocke"></div>
+                  <div class="form-contact block-pro-contact">
+                    <p>
+                      Ahora saldrá RiskFix y será vinculado a una página externa de otra organización.</p>
+                    <div class="btn-leave col-md-12">
+                      <a href="https://navigator.irena.org/Pages/popupFN.aspx">SÍ</a>&nbsp;&nbsp;&nbsp;
+                      <a href="#" data-dismiss="modal" aria-hidden="true">NO    </a>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- MODAL LEAVE TO PAGE -->
+      <section class="breath-cromble">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <a href="/Home/">Inicio</a> /
+              <span>Contacto</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section style="margin-top: 10px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 col-sm-12 block-about">
+              <div class="col-md-12 padding2">
+                <h2 style="margin-left:50px;">Contacto</h2>
+                <br>
+                <div class="col-md-12 col-sm-12 col-xs-12 padding2">
+                  <div class="col-md-8 block-pro-1">
+                    <div class="little-blocke"></div>
+                    <div class="form-contact block-pro-contact" id="dvMensaje" runat="Server">
+                      <label for="nombre" class="info-title">Nombre completo:<span>*</span></label>
+                      <input name="TxNombre" type="text" id="TxNombre" runat="server" class="form-control text-input" />
+                      <label for="nombre" class="info-title">Teléfono:<span>*</span></label>
+                      <input name="TxTelefono" type="text" id="TxTelefono" runat="server" class="form-control text-input" />
+                      <label for="nombre" class="info-title">Correo electrónico:<span>*</span></label>
+                      <input name="TxEmail" type="text" id="TxEmail" runat="server" class="form-control text-input" />
+                      <label for="nombre" class="info-title">Subir archivo</label>
+                      <asp:FileUpload ID="FileUpload1" runat="server" />
+                      <label for="nombre" class="info-title">Tipo de pregunta:<span>*</span></label>
+                      <asp:DropDownList ID="ddAsunto" runat="server">
+                        <asp:ListItem Value="9999">--Choose--</asp:ListItem>
+                        <asp:ListItem Value="1">Pregunta general ...</asp:ListItem>
+                        <asp:ListItem Value="2">Pregunta sobre Riskfix</asp:ListItem>
+                        <asp:ListItem Value="3">Pregunta sobre medios de comunicación</asp:ListItem>
+                        <asp:ListItem Value="4">Feedback de sitio web y apoyo técnico-</asp:ListItem>
+                      </asp:DropDownList>
+                      <label for="nombre" class="info-title">Mensaje<span>*</span></label>
+                      <textarea id="TxMensaje" runat="server" placeholder="Write ..."></textarea>
+                      <asp:Button ID="BtEnviar" runat="server" Text="SEND" style="background-color:green;height:50px" cssclass="btn-upper btn btn-primary checkout-page-button" />
+                      <br />
+                      <asp:Label ID="LbMensaje" runat="server" visible="false" Font-Size="Medium" Font-Bold="true"></asp:Label>
+                    </div>
+                    <div class="form-contact block-pro-contact" id="dvGracias" runat="server" visible="false">
+                      <br />
+                      <br />
+                      <div style="text-align:center">
+                        <h2>¡Gracias por enviarnos su mensaje! </h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 padding1">
+                    <div class="right-left">
+                      <h4>Sede de GGGI</h4>
+                      <p><span>Dirección:</span>
+                        <br> Global Green Growth Institute
+                        <br> 19F Jeongdong Bldg.
+                        <br> 21-15 Jeongdong-gil
+                        <br> Jung-gu Seoul 04518 Republic of Korea
+                        <br>
+                        <br>
+                        <span>Tel:</span>
+                        <br> +82-2-2096-9991
+                        <br>
+                        <br>
+                        <span>Fax </span>
+                        <br> +82-2-2096-9990
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </form>
+  <footer class="foot">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="col-md-3" style="margin-bottom: 12px;">
+            <div>
+              <a href="/Sitemap/" style="border-right: #81cf00 2px; border-right-style: solid; padding-right: 17px;margin-bottom: 69px;">Sitemap&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </div>
+            <br />
+            <div>
+              <a href="Terms-RISKFIX_18_Jan_2016.pdf" style="border-right: #81cf00 2px; border-right-style: solid; padding-right: 17px;margin-bottom: 69px;" target="_blank">Disclaimer</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <a href="#"> RiskFix</a>
+            <br>
+            <p>
+              19F Jeongdong Bldg.
+              <br> 21-15 Jeongdong-gil
+              <br> Jung-gu Seoul 04518 Republic of Korea</p>
+          </div>
+          <div class="col-md-3" style="margin-top: 39px;">
+            <p>© 2015 RISKFIX- All rights reserved </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <!-- jQuery (necessary for Bootstrap 's JavaScript plugins) -->
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Include all template custom js -->
+  <script src="js/jquery.downCount.js"></script>
+  <script src="js/bootstrap-slider.js"></script>
+  <script src="js/zabuto_calendar.min.js"></script>
+  <script src="js/ekko-lightbox.js"></script>
+  <script src="js/custom.js"></script>
+  <script>
+  if (top.location != location) {
+    top.location.href = document.location.href;
+  }
+  $(function() {
+    window.prettyPrint && prettyPrint();
+    $('#IdDvSl15').slider();
+    var RGBChange = function() {
+      $('#RGB').css('background', 'rgb(' + r.getValue() + ',' + g.getValue() + ',' + b.getValue() + ')')
+    };
+  });
+  </script>
+</body>
+
+</html>

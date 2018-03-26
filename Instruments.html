@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>RISK FIX</title>
+  <base id="base" runat="server" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="less/slider.less">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimun-scalable=1.0">
+</head>
+
+<body>
+  <style>
+  .divWaiting {
+    position: absolute;
+    background-color: #FAFAFA;
+    z-index: 2147483647 !important;
+    opacity: 0.8;
+    overflow: hidden;
+    text-align: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 20%;
+  }
+  </style>
+  <form id="form1">
+    <div>
+      <header class="barraup">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-xs-12">
+              <div class="">
+              </div>
+              <div class="col-md-1 col-xs-4 flotarder padding1"><a href="/Logout/" title="Logout" Id="aLogout" runat="server" visible="false">Logout</a><a href="/Register/" title="Login" Id="aLogin" runat="server">Login</a></div>
+              <div class="col-md-2 col-xs-8 flotarder padding1 acount"><a href="/Profile/" id="aMiCuenta" runat="server" visible="false">Mi cuenta<i class="fa fa-user"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <header class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="col-md-3 col-sm-4 col-xs-8">
+              <a href="/Home/">  <img src="img/logo.jpg" alt="Risk Fix"></a></div>
+            <div class="col-xs-12 col-sm-8 col-md-5">
+              <div class="option-search-bar">
+                <div class="input-group">
+                  <input name="Encabezado$TxBuscar" type="text" onchange="javascript:setTimeout('__doPostBack(\'Encabezado$TxBuscar\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="Encabezado_TxBuscar" class="form-control" placeholder="Search..."><span class="input-group-btn"> <button class="btn" type="button" id="Buscar"><i class="fa fa-search"></i></button> </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-5 col-xs-8">
+              <a href="http://www.gggi.org" target="_blank" title="GGGI"><img src="img/logos.jpg" alt="GGGI"> </a>
+            </div>
+            <div class="menu_bar">
+              <button type="button" class="navbar-toggle1 collapsed" data-toggle="collapse" data-target="#navbar-1">
+                <span class="sr-only">Menú</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 header-nav animate-dropdown">
+              <div class="menu collapse navbar-collapse" id="navbar-1" aria-expanded="true">
+                <ul>
+                  <li><a href="index.html" class="c1 c1active" id="aHome" runat="server">INICIO<br> <br></a></li>
+                  <li><a href="about.html" class="c2" id="aAbout" runat="server">ACERCA DE<br> <br></a></li>
+                  <li><a href="instruments.html" class="c3" id="aInstrumentos" runat="server">INSTRUMENTOS<br> <br></a></li>
+                  <li><a href="/Project-Submit/" class="c4" id="aProjectSubmit" runat="server">ACTIVAR MI<br>PROPUESTA</a></li>
+
+                  <li><a href="events.html" class="c6" id="aEventos" runat="server">EVENTOS<br> <br></a></li>
+                  <li><a href="contact.html" class="c7" id="aContacto" runat="server">CONTACTO<br> <br></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="breath-cromble">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <span>Inicio /</span>
+              <a href="#">Instrumentos</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section style="margin-top: 10px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <!-- STAR FILTERS -->
+              <div class="col-md-3">
+                <div class="filter">
+                  <!-- Filter select 1 -->
+                  <h5>País que emite el instrumento</h5>
+                  <div class="option-search-bar" id="dv">
+                    <div class="input-group">
+                      <select>
+                        <option value="Option1">Opción 1 ...</option>
+                        <option value="Option2">Opción 2</option>
+                        <option value="Option3">Opción 3</option>
+                        <option value="Option4">Opción 4</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- Filter select 2 -->
+                  <h5>Tipo de tecnología </h5>
+                  <div class="option-search-bar">
+                    <div class="input-group">
+                      <select>
+                        <option value="Option1">Opción 1 ...</option>
+                        <option value="Option2">Opción 2</option>
+                        <option value="Option3">Opción 3</option>
+                        <option value="Option4">Opción 4</option>
+                      </select>
+                    </div>
+                  </div>
+                  <hr>
+                  <!-- Filter select 3 -->
+                  <h5>Proveedor de Tecnología </h5>
+                  <!-- País -->
+                  <div class="option-search-bar">
+                    <div class="input-group bg-green-inp">
+                      <select>
+                        <option value="Option1">Buscar ...</option>
+                        <option value="Option2">Opción 2</option>
+                        <option value="Option3">Opción 3</option>
+                        <option value="Option4">Opción 4</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- .star slider handle-->
+                  <div class="widget-box dropdown">
+                    <!-- rised bar -->
+                    <div class="slider-content">
+                      <h5>Validez</h5>
+                      <!--
+                                            <p>
+                                                <span class="span-bold">Dates Valid:</span>
+                                                <span id="begin-value" class="slide-value">20.290</span>
+                                            </p>
+                                            <div class="slider slider-horizontal">
+                                            <div class="slider-track"><div class="slider-selection" style="left: 0%; width: 40.58%;"></div><div class="slider-handle" tabindex="0" style="left: 40.58%;"></div><div class="slider-handle hide" tabindex="0" style="left: 0%;"></div></div>
+                                            
+                                            <div id="tooltip" class="tooltip top hide" style="top: -30px; left: 77.5078px;"><div class="tooltip-arrow"></div><div class="tooltip-inner">20290</div></div>
+                                            
+                                            <div id="tooltip_min" class="tooltip top hide" style="top: -30px;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>
+                                            <div id="tooltip_max" class="tooltip hide top" style="top: -30px;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>
+                                            <input type="text" class="span2 rised-range-funds" value="" data-slider-min="0" data-slider-max="50000" data-slider-step="10" data-slider-value="0" style="display: none;">
+                                            
+                                            
+                                            <span style="float: left;">2013</span> <span style="float: right;">2025</span>
+                                            
+                                            </div>-->
+                      <span class="date-1">2000</span>
+                      <span class="date-2">2025</span>
+                      <div class="slider slider-horizontal">
+                        <input type="text" class="span2" value="" data-slider-min="2000" data-slider-max="2025" data-slider-step="1" data-slider-value="[2007,2019]" id="sl2">
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .end slider handle-->
+                  <div class="checked-filter">
+                    <h5>Tipo de política</h5>
+                    <div class="radio">
+                      <input type="checkbox" autocomplete="off"> Permitting/Land</input>
+                      <br>
+                      <input type="checkbox" autocomplete="off"> Network/Grid</input>
+                      <br>
+                      <input type="checkbox" autocomplete="off"> Generation/Revenues</input>
+                      <br>
+                      <input type="checkbox" autocomplete="off"> Fiscal/Tax</input>
+                    </div>
+                  </div>
+                  <div>
+                    <h5>Aplicación Geográfica</h5>
+                    <div class="btn-group checking">
+                      <input type="checkbox" autocomplete="off"> Nacional</input>
+                      <br>
+                      <input type="checkbox" autocomplete="off"> Regional </input>
+                      <br>
+                      <input type="checkbox" autocomplete="off"> Local</input>
+                      <br>
+                    </div>
+                  </div>
+                  <div class="btn-search">
+                    <a href="#">BUSCAR <i class="fa fa-angle-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <!-- END FILTERS -->
+              <div class="col-md-9 ">
+                <!-- tabs-->
+                <div class="tabs-filter">
+                  <ul class="col-md-12 padding1">
+                    <li class="col-md-4 col-sm-12 col-xs-12"><a href="#" class="actives">Política y Regulación</a> </li>
+                    <li class="col-md-4 col-sm-12 col-xs-12"><a href="#">Financiación</a> </li>
+                    <li class="col-md-4 col-sm-12 col-xs-12"><a href="#">Mitigación de Riesgos</a> </li>
+                  </ul>
+                </div>
+                <!-- end tabs -->
+                <div class="contain-info col-md-12 col-xs-12">
+                  <!--info 1 -->
+                  <div>
+                    <div class="little-block"></div>
+                    <div class="block-info col-md-12 col-xs-12 padding1">
+                      <h4 class="col-md-6">Geothermal1 Feed-in Tarifa</h4> asasasffff
+                      <h6 class="col-md-6">Ministry of Energy and Mineral Resources</h6>
+                      <p class="col-md-12">Establishsssses minimum purchasing price through a PPA with the national elcectric company (PLN); financial support through...<a href="Policy-details.html"> View More</a> </p>
+                      <div class="col-md-12 padding1">
+                        <h8 class="col-md-3 col-xs-12">Filter 1 <span>Datos</span></h8>
+                        <h8 class="col-md-3 col-xs-12">Filter 2: <span>Generation/Revenues</span></h8>
+                        <h8 class="col-md-3 col-xs-12">Filter 3 <span>Nacional</span></h8>
+                        <h8 class="col-md-3 col-xs-12">Filter 4 <span>Any</span></h8>
+                      </div>
+                    </div>
+                  </div>
+                  <!--info 1 -->
+                  <!--info 2 -->
+                  <div>
+                    <div class="little-block"></div>
+                    <div class="block-info col-md-12 col-xs-12 padding1">
+                      <h4 class="col-md-6">Geothermal Feed-in Tariff</h4>
+                      <h6 class="col-md-6">Ministry of Energy and Mineral Resources</h6>
+                      <p class="col-md-12">Establishes minimum purchasing price through a PPA with the national elcectric company (PLN); financial support through...<a href="#"> ver más</a> </p>
+                      <div class="col-md-12 padding1">
+                        <h8 class="col-md-3 col-xs-12">Filter 1 <span>Data</span></h8>
+                        <h8 class="col-md-3 col-xs-12">Filter 2: <span>Generation/Revenues</span></h8>
+                        <h8 class="col-md-3 col-xs-12">Filter 3 <span>National</span></h8>
+                        <h8 class="col-md-3 col-xs-12">Filter 4 <span>Any</span></h8>
+                      </div>
+                    </div>
+                  </div>
+                  <!--info 2 -->
+                  <!--info 3 -->
+                  <div>
+                    <div class="little-block"></div>
+                    <div class="block-info col-md-12 col-xs-12 padding1">
+                      <h4 class="col-md-6">Geothermal Feed-in Tariff</h4>
+                      <h6 class="col-md-6">Ministry of Energy and Mineral Resources</h6>
+                      <p class="col-md-12">Establishes minimum purchasing price through a PPA with the national elcectric company (PLN); financial support through...<a href="#"> View More</a> </p>
+                      <div class="col-md-12 padding1">
+                        <h8 class="col-md-3 col-xs-12">Filter 1 <span>Data</span></h8>
+                        <h8 class="col-md-3 col-xs-12">Filter 2: <span>Generation/Revenues</span></h8>
+                        <h8 class="col-md-3 col-xs-12">Filter 3 <span>National</span></h8>
+                        <h8 class="col-md-3 col-xs-12">Filter 4 <span>Any</span></h8>
+                      </div>
+                    </div>
+                  </div>
+                  <!--info 3 -->
+                  <!--info 4 -->
+                  <div>
+                    <div class="little-block"></div>
+                    <div class="block-info col-md-12 col-xs-12 padding1">
+                      <h4 class="col-md-6">Geothermal Feed-in Tariff</h4>
+                      <h6 class="col-md-6">Ministry of Energy and Mineral Resources</h6>
+                      <p class="col-md-12">Establishes minimum purchasing price through a PPA with the national elcectric company (PLN); financial support through... <a href="#"> Ver más </a></p>
+                      <div class="col-md-12 padding1">
+                        <h8 class="col-md-3 col-xs-12">Filter 1 <span>Data</span></h8>
+                        <h8 class="col-md-3 col-xs-12">Filter 2: <span>Generation/Revenues</span></h8>
+                        <h8 class="col-md-3 col-xs-12">Filter 3 <span>National</span></h8>
+                        <h8 class="col-md-3 col-xs-12">Filter 4 <span>Any</span></h8>
+                      </div>
+                    </div>
+                  </div>
+                  <!--info 4 -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </form>
+  <footer class="foot">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="col-md-3" style="margin-bottom: 12px;">
+            <div>
+              <a href="/Sitemap/" style="border-right: #81cf00 2px; border-right-style: solid; padding-right: 17px;margin-bottom: 69px;">Sitemap&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </div>
+            <br />
+            <div>
+              <a href="Terms-RISKFIX_18_Jan_2016.pdf" style="border-right: #81cf00 2px; border-right-style: solid; padding-right: 17px;margin-bottom: 69px;" target="_blank">Disclaimer</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <a href="#"> RiskFix</a>
+            <br>
+            <p>
+              19F Jeongdong Bldg.
+              <br> 21-15 Jeongdong-gil
+              <br> Jung-gu Seoul 04518 Republic of Korea</p>
+          </div>
+          <div class="col-md-3" style="margin-top: 39px;">
+            <p>© 2015 RISKFIX- All rights reserved </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <!-- jQuery (necessary for Bootstrap 's JavaScript plugins) -->
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Include all template custom js -->
+  <script src="js/jquery.downCount.js"></script>
+  <script src="js/bootstrap-slider.js"></script>
+  <script src="js/zabuto_calendar.min.js"></script>
+  <script src="js/ekko-lightbox.js"></script>
+  <script src="js/custom.js"></script>
+  <script>
+  if (top.location != location) {
+    top.location.href = document.location.href;
+  }
+  $(function() {
+    window.prettyPrint && prettyPrint();
+    $('#IdDvSl15').slider();
+    var RGBChange = function() {
+      $('#RGB').css('background', 'rgb(' + r.getValue() + ',' + g.getValue() + ',' + b.getValue() + ')')
+    };
+  });
+  </script>
+</body>
+
+</html>
+</body>
+
+</html>

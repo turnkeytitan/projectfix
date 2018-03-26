@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>RISK FIX</title>
+  <base id="base" runat="server" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="less/slider.less">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimun-scalable=1.0">
+</head>
+
+<body>
+  <style>
+  .divWaiting {
+    position: absolute;
+    background-color: #FAFAFA;
+    z-index: 2147483647 !important;
+    opacity: 0.8;
+    overflow: hidden;
+    text-align: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 20%;
+  }
+  </style>
+  <form id="form1">
+    <div>
+      <header class="barraup">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-xs-12">
+              <div class="">
+              </div>
+              <div class="col-md-1 col-xs-4 flotarder padding1"><a href="/Logout/" title="Logout" Id="aLogout" runat="server" visible="false">Salir</a><a href="/Register/" title="Login" Id="aLogin" runat="server">Login</a></div>
+              <div class="col-md-2 col-xs-8 flotarder padding1 acount"><a href="/Profile/" id="aMiCuenta" runat="server" visible="false">Mi cuenta<i class="fa fa-user"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <header class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="col-md-3 col-sm-4 col-xs-8">
+              <a href="/Home/">  <img src="img/logo.jpg" alt="Risk Fix"></a></div>
+            <div class="col-xs-12 col-sm-8 col-md-5">
+              <div class="option-search-bar">
+                <div class="input-group">
+                  <input name="Encabezado$TxBuscar" type="text" onchange="javascript:setTimeout('__doPostBack(\'Encabezado$TxBuscar\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="Encabezado_TxBuscar" class="form-control" placeholder="Search..."><span class="input-group-btn"> <button class="btn" type="button" id="Buscar"><i class="fa fa-search"></i></button> </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-5 col-xs-8">
+              <a href="http://www.gggi.org" target="_blank" title="GGGI"><img src="img/logos.jpg" alt="GGGI"> </a>
+            </div>
+            <div class="menu_bar">
+              <button type="button" class="navbar-toggle1 collapsed" data-toggle="collapse" data-target="#navbar-1">
+                <span class="sr-only">Menu</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 header-nav animate-dropdown">
+              <div class="menu collapse navbar-collapse" id="navbar-1" aria-expanded="true">
+                <ul>
+                  <li><a href="/Home/" class="c1 c1active" id="aHome" runat="server">INICIO<br> <br></a></li>
+                  <li><a href="About/" class="c2" id="aAbout" runat="server">ACERCA DE<br> <br></a></li>
+                  <li><a href="/Instruments/" class="c3" id="aInstrumentos" runat="server">INSTRUMENTOS<br> <br></a></li>
+                  <li><a href="/Project-Submit/" class="c4" id="aProjectSubmit" runat="server">ACTIVAR MI<br>MI PROPUESTA</a></li>
+
+                  <li><a href="/Events/" class="c6" id="aEventos" runat="server">EVENTOS<br> <br></a></li>
+                  <li><a href="/Contact/" class="c7" id="aContacto" runat="server">CONTACTO<br> <br></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="breath-cromble">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <span>inicio /</span>
+              <a href="Project.html">kick start your project</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 col-sm-12 block-conten">
+              <div class="col-md-9 col-xs-12 text-submission block-conten">
+                <div class="little-blocke" style="margin-top: 5px;"></div>
+                <h1>Envíe su propuesta</h1>
+                <hr>
+                <p>Riskfix apoya el esfuerzo de desarrolladores de proyectos que deseen emprender proyectos de eficiencia energética y de energías renovables en países emergentes y en desarrollo.
+                  <br>
+                  <br> La preparación y desarrollo de propuestas deben ser llevados a cabo de una manera estandarizada, de acuerdo con los criterios establecidos por varios donantes, para tener oportunidad de ser un proyecto financiable y, finalmente, recibir fondos para ser llevado a cabo.
+                  <br>
+                  <br> Riskfix ha preparado un conjunto de criterios de evaluación, en base a las propuestas de proyectos que están siendo evaluados por los inversores, los fondos y los bancos multilaterales, que se utilizarán para revisar y evaluar propuestas.
+                  <br>
+                  <br> En concreto, las propuestas presentadas tendrán una "revisión de su integralidad". Riskfix los valorará en base al cumplimiento de los siguientes criterios a nivel técnico, financiero y operativo.
+                  <br>
+                  <br> Propuestas calificados recibirán más apoyo en especie de Riskfix, en forma de asesoramiento técnico y asistencia sobre cómo desarrollar una propuesta "invertible" y la fijación de cualquier riesgo que pueda derivarse de la recepción de los fondos. Después de la presentación de su propuesta, puede tardar unas tres semanas para Riskfix evaluarla. El idioma de propuestas es el Inglés.
+                  <br>
+                  <h5>Todas las propuestas serán tratadas como confidenciales y únicamente serán compartidas entre funcionarios de Riskfix.</h5>
+                </p>
+                <br>
+                <div class="col-md-12 criteria">
+                  <h4>Criterios de evaluación</h4>
+                </div>
+                <div class="panel-group col-md-12 padding1" id="accordion">
+                  <!-- 1 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed"><i class="fa fa-angle-down"></i> Liderazgo de la compañía    </a>
+                                </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse" style="height: 0px;">
+                      <div class="panel-body">
+                        <!--<h3>¿Qué es?</h3>-->
+                        <p>• Empresario experimentado con capacidad demostrada para ejecutar proyectos de eficiencia energética y / o energías renovables
+                          <br> • Tener completo o un plan para completar un experimentado equipo de gestión
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .1 -->
+                  <!-- 2 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><i class="fa fa-angle-down"></i> Idea </a>
+                                </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <h3></h3>
+                        <p>• Prueba de concepto de modelo de negocio y sus ingresos
+                          <br> • Demostración de productos o mercado sin ambigüedades .
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .2 -->
+                  <!-- 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed"><i class="fa fa-angle-down"></i> Ejecución  </a>
+                                </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <h3></h3>
+                        <p>• Camino de escalamiento e impacto operacional claro y cuantificable
+                          <br> • Operaciones históricas que muestran capacidad para ejecutar, al menos un año de operaciones
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .3 -->
+                  <!-- 4 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" class="collapsed"><i class="fa fa-angle-down"></i> Finanzas   </a>
+                                </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <h3></h3>
+                        <p>
+                          • Generación de ingresos
+                          <br> • Flujos de caja estables
+                          <br> • Márgenes brutos positivos
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .4 -->
+                  <!-- 5 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" class="collapsed"><i class="fa fa-angle-down"></i> Organización   </a>
+                                </h4>
+                    </div>
+                    <div id="collapseFive" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <h3></h3>
+                        <p>• Estructura y sistemas básicos con los que se cuenta.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .5 -->
+                  <!-- 6 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix" class="collapsed"><i class="fa fa-angle-down"></i> Mercado y consumidores </a>
+                                </h4>
+                    </div>
+                    <div id="collapseSix" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <h3></h3>
+                        <p>• Análisis de mercado
+                          <br> • Estrategia de penetración de mercado
+                          <br> • Prueba de la captación de clientes y la receptividad del mercado
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .6 -->
+                  <!-- 7 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" class="collapsed"><i class="fa fa-angle-down"></i> Competencia / Sustitución   </a>
+                                </h4>
+                    </div>
+                    <div id="collapseSeven" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <h3></h3>
+                        <p>• Estructura y sistemas básicos con los que se cuenta.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .7 -->
+                  <!-- 8 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseEight" class="collapsed"><i class="fa fa-angle-down"></i> Potencial de crecimiento   </a>
+                                </h4>
+                    </div>
+                    <div id="collapseEight" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <h3></h3>
+                        <p>• Escalabilidad del proyecto y la demostración de plan para generar beneficios más allá de la idea inicial del producto.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .8 -->
+                  <!-- 9 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseNine" class="collapsed"><i class="fa fa-angle-down"></i> Regulación y leyes  </a>
+                                </h4>
+                    </div>
+                    <div id="collapseNine" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <h3></h3>
+                        <p>• Ambiente regulatorio y legal definido y establecido.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .9 -->
+                  <!-- 10-->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTen" class="collapsed"><i class="fa fa-angle-down"></i> Estado ESG     </a>
+                                </h4>
+                    </div>
+                    <div id="collapseTen" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <h3></h3>
+                        <p>• Los resultados satisfactorios de evaluación de la gobernabilidad ambiental, social y corporativa.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .10 -->
+                  <!-- 11 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseEleven" class="collapsed"><i class="fa fa-angle-down"></i> Compromiso </a>
+                                </h4>
+                    </div>
+                    <div id="collapseEleven" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <h3></h3>
+                        <p>• Ya se han dado los primeros pasos que fijan los fondos propios necesarios para la ejecución del proyecto.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .11 -->
+                  <!-- 12 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwelve" class="collapsed"><i class="fa fa-angle-down"></i> Estratégia de salida  </a>
+                                </h4>
+                    </div>
+                    <div id="collapseTwelve" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <h3></h3>
+                        <p>• Demostrar una estrategia de salida claramente articulada - cómo los inversores van a recibir dichos retornos - es esencial. Los ejemplos específicos de la estrategia operativa que muestra los pasos específicos para alcanzar la salida.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .12 -->
+                </div>
+                <a class="col-md-12" href="#videoprincipal" data-toggle="modal">
+                    Términos y condiciones <i class="fa fa-chevron-right"></i>
+                    </a>
+                <div class="col-md-12">
+                  <div class="modal fade" id="videoprincipal">}
+                    <div class="modal-dialog">
+                      <!--          HEADER DE LA VENTANA-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                          <h3>Términos y condiciones</h3>
+                          <p>YOU ACKNOWLEDGE THAT ALL DATA, KNOW-HOW, MATERIAL, AND OTHER INFORMATION (“INFORMATION”) INCLUDED IN YOUR PROPOSAL AND/OR PROVIDED/UPLOADED BY YOU ON THE RISKFIX WEBSITE SHALL BE CONSIDERED YOUR CONFIDENTIAL OR PROPRIETARY INFORMATION ONLY IF IT IS EXPLICITLY MARKED OR LABELLED AS “CONFIDENTIAL AND PROPRIETARY” WITH SPECIFIC REFERENCES MADE TO THE PAGES AND PARAGRAPHS CONTAINING SUCH CONFIDENTIAL AND PROPRIETARY INFORMATION. GGGI WILL TREAT ALL OTHER INFORMATION SUBMITTED AS NON-CONFIDENTIAL AND NON-PROPRIETARY. WITHOUT ASSUMING ANY LIABILITY FOR INADVERTENT DISCLOSURE, GGGI WILL LIMIT DISSEMINATION OF SUCH CONFIDENTIAL AND PROPRIETARY INFORMATION TO ITS PERSONNEL. IT BEING UNDERSTOOD AND ACKNOWLEDGED THAT SUBMITTED PROPOSALS WILL BE REVIEWED BY GGGI PERSONNEL, WHO WILL BECOME KNOWLEDGEABLE OF THE INFORMATION PROVIDED IN THE PROPOSAL.
+                            <br>
+                            <br> GGGI SHALL NOT IN ANY WAY BE RESTRICTED OR IMPAIRED FROM USING, DISCLOSING, OR OTHERWISE DEALING WITH ANY INFORMATION (CONFIDENTIAL OR OTHERWISE) WHICH AT THE TIME OF ITS RECEIPT:
+                            <br>
+                            <br> (I) IS GENERALLY AVAILABLE IN THE PUBLIC DOMAIN OR BECOMES AVAILABLE TO THE PUBLIC THROUGH NO ACT OF GGGI RECEIVING SAID INFORMATION; OR
+                            <br>
+                            <br> (II) IS INDEPENDENTLY KNOWN BY GGGI PRIOR TO RECEIPT THEREOF, WHICH GGGI CAN DEMONSTRATE BY DOCUMENTED PROOF; OR
+                            <br>
+                            <br> (III) IS LAWFULLY GIVEN TO GGGI BY A THIRD PARTY WHO IS NOT BOUND BY ANY OBLIGATION TO PRESERVE IT AS CONFIDENTIAL, OR
+                            <br>
+                            <br> (IV) IS REQUIRED BY ANY LAW, RULE, REGULATION, ORDER, DECISION, DECREE OR SUBPOENA OR OTHER JUDICIAL, ADMINISTRATIVE OR LEGAL PROCESS TO BE DISCLOSED.
+                            <br>
+                            <br> YOU ACKNOWLEDGE THAT YOU ARE RESPONSIBLE FOR THE INFORMATION AND PROPOSALS THAT YOU SUBMIT, AND THAT YOU, NOT GGGI, HAVE FULL RESPONSIBILITY FOR THE INFORMATION AND PROPOSALS INCLUDING THEIR LEGALITY, RELIABILITY, APPROPRIATENESS, ORIGINALITY AND COPYRIGHT.
+                            <br>
+                            <br> SUBMISSION OF THE PROPOSAL MAY NOT BE CONSTRUED AS BINDING ON OR COMMITTING EITHER YOU OR GGGI TO NEGOTIATE OR CONCLUDE ANY OTHER AGREEMENT IN CONNECTION WITH THE PROPOSAL NOR TO CREATE BETWEEN YOU AND GGGI AN ASSOCIATION, TRUST, PARTNERSHIP, JOINT VENTURE, AGENCY OR OTHER BUSINESS ENTITY OR RELATIONSHIP. YOU ACKNOWLEDGE THAT GGGI IS NOT PREVENTED IN ANY WAY FROM UNDERTAKING FROM TIME TO TIME SIMILAR EVALUATIONS OR ENTERING INTO ANY DISCUSSIONS, NEGOTIATIONS, AGREEMENTS OR RELATIONSHIPS WITH ONE OR MORE THIRD PARTIES COVERING OR TOUCHING UPON SUBJECTS AND ISSUES THAT ARE THE SAME OR SIMILAR TO THOSE CONTEMPLATED IN RELATION TO YOUR SUBMITTED PROPOSAL.
+                            <br>
+                            <br> TO THE EXTENT PERMITTED BY LAW, GGGI SHALL HAVE NO LIABILITY FOR ANY DIRECT, INDIRECT OR CONSEQUENTIAL LOSS OR DAMAGE INCURRED BY YOU IN CONNECTION WITH OR ARISING OUT OF THE USE OF RISKFIX OR THE SUBMISSION OF THE INFORMATION OR THE PROPOSAL, INCLUDING, WITHOUT LIMITATION ANY LIABILITY FOR (I) LOSS OF INCOME OR REVENUE, (II) LOSS OF BUSINESS, (III) LOSS OF PROFITS OR CONTRACTS, (IV) LOSS OF ANTICIPATED SAVINGS, (V) LOSS OF DATA, (VI) LOSS OF GOODWILL, (VII) WASTED MANAGEMENT OR OFFICE TIME, AND (VIII) FOR ANY OTHER LOSS OR DAMAGE OF ANY KIND, HOWEVER ARISING AND WHETHER CAUSED BY TORT (INCLUDING NEGLIGENCE), BREACH OF CONTRACT OR OTHERWISE, EVEN IF FORESEEABLE.
+                          </p>
+                          <br>
+                          <button class="close" data-dismiss="modal" aria-hidden="true">Salir</button>
+                          <br>
+                          <br>
+                        </div>
+                      </div>
+                      <!--          HEADER DE LA VENTANA-->
+                    </div>
+                  </div>
+                </div>
+                <div class="radio col-md-12">
+                  <input type="checkbox" autocomplete="off">Estoy de acuerdo </input>
+                  <br>
+                </div>
+                <div class="butn-sub">
+                  <ul>
+                    <li><a href="#">PRESENTAR</a> </li>
+                    <li><a href="#">DESCARGAR</a> </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-3 col-xs-12 block-conten">
+                <div class="login-form-project">
+                  <p>Iniciar Sesión</p>
+                  <label for="nombre" class="info-title">Nombre de usuario/ Correo electrónico <span>*</span></label>
+                  <input name="TxUsuarioIngreso" type="text" id="TxUsuarioIngreso" class="form-control text-input">
+                  <label for="nombre" class="info-title">Contraseña<span>*</span></label>
+                  <input name="TxUsuarioIngreso" type="text" id="TxUsuarioIngreso" class="form-control text-input">
+                  <button onclick="if (typeof(Page_ClientValidate) == 'function') Page_ClientValidate(''); __doPostBack('BtIngresar','')" id="BtIngresar" type="submit" class="btn-upper btn btn-primary checkout-page-button">ENTRAR</button>
+                  <a href="#">¿Olvidaste tu contraseña? </a>
+                  <p class="create-acount">¿No tienes una cuenta?<a href="#"> Registrate</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="foot">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="col-md-3" style="margin-bottom: 12px;">
+                <div>
+                  <a href="/Sitemap/" style="border-right: #81cf00 2px; border-right-style: solid; padding-right: 17px;margin-bottom: 69px;">Sitemap&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                </div>
+                <br />
+                <div>
+                  <a href="Terms-RISKFIX_18_Jan_2016.pdf" style="border-right: #81cf00 2px; border-right-style: solid; padding-right: 17px;margin-bottom: 69px;" target="_blank">Disclaimer</a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <a href="#"> RiskFix</a>
+                <br>
+                <p>
+                  19F Jeongdong Bldg.
+                  <br> 21-15 Jeongdong-gil
+                  <br> Jung-gu Seoul 04518 Republic of Korea</p>
+              </div>
+              <div class="col-md-3" style="margin-top: 39px;">
+                <p>© 2015 RISKFIX- All rights reserved </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+      <!-- jQuery (necessary for Bootstrap 's JavaScript plugins) -->
+      <script src="js/jquery-1.11.1.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/jquery.js"></script>
+      <script src="js/jquery.nicescroll.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <!-- Include all template custom js -->
+      <script src="js/jquery.downCount.js"></script>
+      <script src="js/bootstrap-slider.js"></script>
+      <script src="js/zabuto_calendar.min.js"></script>
+      <script src="js/ekko-lightbox.js"></script>
+      <script src="js/custom.js"></script>
+      <script>
+      if (top.location != location) {
+        top.location.href = document.location.href;
+      }
+      $(function() {
+        window.prettyPrint && prettyPrint();
+        $('#IdDvSl15').slider();
+        var RGBChange = function() {
+          $('#RGB').css('background', 'rgb(' + r.getValue() + ',' + g.getValue() + ',' + b.getValue() + ')')
+        };
+      });
+      </script>
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>RISK FIX</title>
+  <base id="base" runat="server" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="less/slider.less">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimun-scalable=1.0">
+</head>
+
+<body>
+  <style>
+  .divWaiting {
+    position: absolute;
+    background-color: #FAFAFA;
+    z-index: 2147483647 !important;
+    opacity: 0.8;
+    overflow: hidden;
+    text-align: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 20%;
+  }
+  </style>
+  <form id="form1">
+    <div>
+      <header class="barraup">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-xs-12">
+              <div class="">
+                <nav>
+                  <ul class="nav1">
+                    <li><a href="#"><i class="fa fa-globe"></i> Español <i class="fa fa-angle-down"></i></a>
+                      <ul>
+                        <li><a href="#">English</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <!-- .menu list -->
+                </nav>
+              </div>
+              <div class="col-md-1 col-xs-4 flotarder padding1"><a href="/Logout/" title="Logout" Id="aLogout" runat="server" visible="false">Salir</a><a href="/Register/" title="Login" Id="aLogin" runat="server">Login</a></div>
+              <div class="col-md-2 col-xs-8 flotarder padding1 acount"><a href="/Profile/" id="aMiCuenta" runat="server" visible="false">Mi cuenta<i class="fa fa-user"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <header class="container">
+        <div class="row">
+          <div class="col-md-12 texto3">
+            <div class="col-md-3 col-sm-4 col-xs-8 ">
+              <a href="/Home/">  <img src="img/logo.jpg" alt="Risk Fix"></a></div>
+            <div class="col-xs-12 col-sm-8 col-md-5">
+              <div class="option-search-bar">
+                <div class="input-group">
+                  <input name="Encabezado$TxBuscar" type="text" onchange="javascript:setTimeout('__doPostBack(\'Encabezado$TxBuscar\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="Encabezado_TxBuscar" class="form-control" placeholder="Search..."><span class="input-group-btn"> <button class="btn" type="button" id="Buscar"><i class="fa fa-search"></i></button> </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-5 col-xs-8">
+              <a href="http://www.gggi.org" target="_blank" title="GGGI"><img src="img/logos.jpg" alt="GGGI"> </a>
+            </div>
+          </div>
+          <div class="menu_bar">
+            <button type="button" class="navbar-toggle1 collapsed" data-toggle="collapse" data-target="#navbar-1">
+              <span class="sr-only">Menú</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 header-nav animate-dropdown">
+            <div class="menu collapse navbar-collapse" id="navbar-1" aria-expanded="true">
+              <ul>
+                <li><a href="/Home/" class="c1 c1active" id="aHome" runat="server">INICIO<br> <br></a></li>
+                <li><a href="About/" class="c2" id="aAbout" runat="server">NOSOTROS<br> <br></a></li>
+                <li><a href="/Instruments/" class="c3" id="aInstrumentos" runat="server">INSTRUMENTOS<br> <br></a></li>
+                <li><a href="/Project-Submit/" class="c4" id="aProjectSubmit" runat="server">ACTIVAR MI<br>PROPUESTA</a></li>
+                <li><a href="#leave" data-toggle="modal" class="c5">FINANCIAMIENTO<br> CLIMÁTICO <br></a></li>
+                <li><a href="/Events/" class="c6" id="aEventos" runat="server">EVENTOS<br> <br></a></li>
+                <li><a href="/Contact/" class="c7" id="aContacto" runat="server">CONTACTO<br> <br></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+    </header>
+    <!-- Contenido de la pág -->
+    <div class="container">
+      <div class="row texto1">
+        <div class="col-md-12 dline"></div>
+        <div class="col-md-12">
+          <p style="text-align: justify;font-family: &quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;font-size: 15px;">
+            <br> Governments, multilateral development banks, and other institutions offer a variety of policy and regulation, financing, and risk mitigation instruments to support renewable energy projects. Search for instruments for your project.
+          </p>
+        </div>
+      </div>
+      <div class="row texto1">
+        <div class="col-md-4 text-center">
+          <p class="selectort" style="font-size: larger;">
+            Policy &amp Regulation
+            <input type="radio" name="group2" value="Water">
+          </p>
+        </div>
+        <div class="col-md-4 text-center">
+          <p class="selector" style="font-size: larger;">
+            Financing
+            <input type="radio" name="group2" value="Water">
+          </p>
+        </div>
+        <div class="col-md-4 text-center">
+          <p class="selector" style="font-size: larger;">
+            Risk Management
+            <input type="radio" name="group2" value="Water">
+          </p>
+        </div>
+      </div>
+      <div class="row texto2">
+        <div class="col-md-3 text-center">
+          <select name="" onchange="" id="" style="height:38px;width:237px;">
+            <option selected="selected" value="9999">--Select--</option>
+            <option value="1">Línea de Tiempo</option>
+            <option value="2">Desagregación por Sector Económico</option>
+            <option value="3">Desagregación por Tipo de Entidad</option>
+            <option value="4">Desagregación por Objetivo</option>
+          </select>
+        </div>
+        <div class="col-md-3 text-center">
+          <select name="" onchange="" id="" style="height:38px;width:237px;">
+            <option selected="selected" value="9999">--Select--</option>
+            <option value="1">Línea de Tiempo</option>
+            <option value="2">Desagregación por Sector Económico</option>
+            <option value="3">Desagregación por Tipo de Entidad</option>
+            <option value="4">Desagregación por Objetivo</option>
+          </select>
+        </div>
+        <div class="col-md-3 text-center">
+          <select name="" onchange="" id="" style="height:38px;width: 237px;px;">
+            <option selected="selected" value="9999">--Select--</option>
+            <option value="1">Línea de Tiempo</option>
+            <option value="2">Desagregación por Sector Económico</option>
+            <option value="3">Desagregación por Tipo de Entidad</option>
+            <option value="4">Desagregación por Objetivo</option>
+          </select>
+        </div>
+        <div class="btn-search text-center col-md-3" style="top: -1px; left: 15px;">
+          <a href="#">SEARCH  <i class="fa fa-angle-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer class="foot">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="col-md-3" style="margin-bottom: 12px;">
+              <div>
+                <a href="/Sitemap/" style="border-right: #81cf00 2px; border-right-style: solid; padding-right: 17px;margin-bottom: 69px;">Sitemap&nbsp;&nbsp;&nbsp;&nbsp;</a>
+              </div>
+              <br />
+              <div>
+                <a href="Terms-RISKFIX_18_Jan_2016.pdf" style="border-right: #81cf00 2px; border-right-style: solid; padding-right: 17px;margin-bottom: 69px;" target="_blank">Disclaimer</a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <a href="#"> RiskFix</a>
+              <br>
+              <p>
+                19F Jeongdong Bldg.
+                <br> 21-15 Jeongdong-gil
+                <br> Jung-gu Seoul 04518 Republic of Korea</p>
+            </div>
+            <div class="col-md-3" style="margin-top: 39px;">
+              <p>© 2015 RISKFIX- All rights reserved </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap 's JavaScript plugins) -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Include all template custom js -->
+    <script src="js/jquery.downCount.js"></script>
+    <script src="js/bootstrap-slider.js"></script>
+    <script src="js/zabuto_calendar.min.js"></script>
+    <script src="js/ekko-lightbox.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+    if (top.location != location) {
+      top.location.href = document.location.href;
+    }
+    $(function() {
+      window.prettyPrint && prettyPrint();
+      $('#IdDvSl15').slider();
+      var RGBChange = function() {
+        $('#RGB').css('background', 'rgb(' + r.getValue() + ',' + g.getValue() + ',' + b.getValue() + ')')
+      };
+    });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="HeaRF">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Riskfix</title>
+  <base id="base" runat="server" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="less/slider.less">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimun-scalable=1.0">
+</head>
+
+<body>
+  <style>
+  .divWaiting {
+    position: absolute;
+    background-color: #FAFAFA;
+    z-index: 2147483647 !important;
+    opacity: 0.8;
+    overflow: hidden;
+    text-align: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 20%;
+  }
+  </style>
+  <form id="form1">
+    <div>
+      <header class="barraup">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-xs-12">
+              <div class="">
+                <nav>
+                  <ul class="nav1">
+                    <li><a href="#" id="a1" runat="server" onserverclick="aEnglish_ServerClick"></a></li>
+                    <li><a href="#" id="a2" runat="server" onserverclick="aSpanish_ServerClick"></a> </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col-md-1 col-xs-4 flotarder padding1"><a href="/Logout/" title="Logout" Id="aLogout" runat="server" visible="false">Logout</a><a href="/Register/" title="Login" Id="aLogin" runat="server">Login</a></div>
+              <div class="col-md-2 col-xs-8 flotarder padding1 acount"><a href="/Profile/" id="aMiCuenta" runat="server" visible="false">My Account<i class="fa fa-user"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <header class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="col-md-3 col-sm-4 col-xs-8">
+              <a href="/Home/">  <img src="img/logo.jpg" alt="Riskfix" /></a></div>
+            <div class="col-xs-12 col-sm-8 col-md-5">
+              <div class="option-search-bar">
+                <div class="input-group">
+                  <asp:TextBox name="Buscar" id="TxBuscar" runat="server" tooltip="Click" cssclass="form-control" placeholder="Search..."> </asp:TextBox>
+                  <span class="input-group-btn"> <button class="btn" type="button" id="Button1" runat="server"><i class="fa fa-search"></i></button> </span>
+                </div>
+              </div>
+            </div>
+            <a href="http://www.gggi.org" target="_blank" title="GGGI"><img src="img/logos.jpg" alt="GGGI"> </a>
+          </div>
+          <div class="menu_bar">
+            <button type="button" class="navbar-toggle1 collapsed" data-toggle="collapse" data-target="#navbar-1">
+              <span class="sr-only" id="spMenu" runat="server">Menu</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 header-nav animate-dropdown">
+            <div class="menu collapse navbar-collapse" id="navbar-1" aria-expanded="true">
+              <ul>
+                <li><a href="/Home/" class="c1 c1active" id="a3" runat="server">HOME<br> <br></a></li>
+                <li><a href="About/" class="c2" id="aAbout" runat="server">ABOUT<br> <br></a></li>
+                <li><a href="/Instruments/" class="c3" id="aInstrumentos" runat="server">INSTRUMENTS<br> <br></a></li>
+                <li><a href="/Project-Submit/" class="c4" id="aProjectSubmit" runat="server">KICK START <br>YOUR PROJECT</a></li>
+                <li><a href="/Climate-Finance/" data-toggle="modal" class="c5" id="aAccessCF" runat="server">ACCESS TO<br>CLIMATE FINANCE <br></a></li>
+                <li><a href="/Events/" class="c6" id="aEventos" runat="server">NEWS<br> <br></a></li>
+                <li><a href="/Contact/" class="c7" id="aContacto" runat="server">CONTACT US<br> <br></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="breath-cromble">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <a href="/Home/" title="Home" id="aHome" runat="server">Home</a> /
+              <span id="spI" runat="server">Instruments</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section style="margin-top: 10px;">
+        <div class="container">
+          <div class="row texto1">
+            <div class="col-md-12">
+              <p style="text-align: justify;font-family:Helvetica;font-size: 15px;" id="pIntroductorio" runat="server">
+                <br/> Governments, multilateral development banks, and other institutions offer a variety of policy and regulation, financing, and risk mitigation instruments to support renewable energy projects. Search for instruments for your project.
+                <br/>
+                <br/> Please select the instrument category first
+              </p>
+            </div>
+          </div>
+          <div class="row texto1" style="margin-top:-30px">
+            <div class="col-md-12 text-center">
+              <asp:RadioButtonList ID="RbInstrumentos" runat="server" RepeatDirection="Horizontal" style="width:100%" TextAlign="Left">
+                <asp:ListItem Value="3">Policy &amp Regulation&nbsp;</asp:ListItem>
+                <asp:ListItem Value="6">Financing&nbsp;</asp:ListItem>
+                <asp:ListItem Value="4">Risk Management&nbsp;</asp:ListItem>
+              </asp:RadioButtonList>
+            </div>
+          </div>
+          <div class="row texto2" style="margin-top:-30px">
+            <div class="col-md-3 text-center">
+              <h5 id="h51" runat="server"></h5>
+              <select name="" onchange="" id="" style="height:38px;width:237px;">
+                <option selected="selected" value="9999">--Select--</option>
+                <option value="1">Línea de Tiempo</option>
+                <option value="2">Desagregación por Sector Económico</option>
+                <option value="3">Desagregación por Tipo de Entidad</option>
+                <option value="4">Desagregación por Objetivo</option>
+              </select>
+            </div>
+            <div class="col-md-3 text-center">
+              <h5 id="h52" runat="server"></h5>
+              <select name="" onchange="" id="Select1" style="height:38px;width:237px;">
+                <option selected="selected" value="9999">--Select--</option>
+                <option value="1">Línea de Tiempo</option>
+                <option value="2">Desagregación por Sector Económico</option>
+                <option value="3">Desagregación por Tipo de Entidad</option>
+                <option value="4">Desagregación por Objetivo</option>
+              </select>
+            </div>
+            <div class="col-md-3 text-center">
+              <h5 id="h53" runat="server"></h5>
+              <select name="" onchange="" id="Select2" style="height:38px;width:237px;">
+                <option selected="selected" value="9999">--Select--</option>
+                <option value="1">Línea de Tiempo</option>
+                <option value="2">Desagregación por Sector Económico</option>
+                <option value="3">Desagregación por Tipo de Entidad</option>
+                <option value="4">Desagregación por Objetivo</option>
+              </select>
+            </div>
+            <div class="btn-search text-center col-md-3" style="top: -12px;left: 11px;">
+              <br />
+              <asp:Button ID="BtBuscar1" runat="server" ToolTip="Click" Text="SEARCH >" CssClass="BotonAceptar" />
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <!-- STAR FILTERS -->
+              <div class="col-md-3 blockse">
+                <div class="filter" id="dvFiltro" runat="server">
+                </div>
+                <div class="filter" style="padding: 10px 0px 15px 15px;">
+                  <div class="btn-search" id="dvBuscar" runat="server" visible="false">
+                    <asp:Button ID="BtBuscar" runat="server" ToolTip="Click" Text="SEARCH >" CssClass="BotonAceptar" />
+                  </div>
+                </div>
+              </div>
+              <!-- END FILTERS -->
+              <div class="col-md-9">
+                <!-- end tabs -->
+                <div class="contain-info col-md-12 col-xs-12" style="margin-top:-30px">
+                  <p><span id="spTotal" runat="server">Total matching criteria: </span>25</p>
+                  <div>
+                    <div class="little-block"></div>
+                    <div class="block-info col-md-12 col-xs-12 padding1">
+                      <h4 class="col-md-6"><a href="#" id="aTitulo" style="font-style:normal;font-weight:bold;font-size:20px" title="Detail information" runat="server"><asp:Label ID="LbPosicion11" runat="server" text='<%# Eval("Posicion11")%>' ></asp:Label></a></h4>
+                      <h6 class="col-md-6">XXXXXXXXX </h6>
+                      <div class="col-md-12">
+                        lOREM iPSUM ...
+                        <a href="#" id="aVerMas" runat="server" style="font-weight:bold;font-size:14px" title="Detail information">Ver más</a></div>
+                      <div class="col-md-12 padding1" id="dvShownResult" runat="server">
+                        fffffff
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="little-block"></div>
+                    <div class="block-info col-md-12 col-xs-12 padding1">
+                      <h4 class="col-md-6"><a href="#" id="a4" style="font-style:normal;font-weight:bold;font-size:20px" title="Detail information" runat="server">Título</a></h4>
+                      <h6 class="col-md-6">Titulo 3 </h6>
+                      <div class="col-md-12">Titulo 3 ...
+                        <a href="#" id="a5" runat="server" style="font-weight:bold;font-size:14px" title="Detail information">Ver más</div> 
+                                                            
+                                                              <div class="col-md-12 padding1"  >
+                                                              Mostrar
+                                                            </div> 
+                                                       </div>
+                                                     </div>
+                                                   
+
+                           </div> 
+                       </div> 
+                    </div>
+            </div>
+        </div>
+        </section>
+         
+    </div>
+    </form>
+    <footer class="foot">
+       <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-3" style="margin-bottom: 12px;">
+                        <div>
+                              <a href="/Sitemap/" style="border-right: #81cf00 2px; border-right-style: solid; padding-right: 17px;margin-bottom: 69px;" id="aSitemap" runat="server">Sitemap&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                      </div>
+                      <br />
+                      <div>
+                        <a href="Terms-RISKFIX_18_Jan_2016.pdf" style="border-right: #81cf00 2px; border-right-style: solid; padding-right: 17px;margin-bottom: 69px;" target="_blank" id="aTerminos" runat="server">Disclaimer</a>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <a href="#"> Riskfix</a>
+                      <br>
+                      <p id="pRF" runat="server">
+                        19F Jeongdong Bldg.
+                        <br> 21-15 Jeongdong-gil
+                        <br> Jung-gu Seoul 04518 Republic of Korea</p>
+                    </div>
+                    <div class="col-md-3" style="margin-top: 39px;">
+                      <p id="pDerechos" runat="server">© 2015 RISKFIX- All rights reserved </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </footer>
+              <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+              <!-- jQuery (necessary for Bootstrap 's JavaScript plugins) -->
+              <script src="js/jquery-1.11.1.min.js"></script>
+              <!-- Include all compiled plugins (below), or include individual files as needed -->
+              <script src="js/jquery.js"></script>
+              <script src="js/jquery.nicescroll.min.js"></script>
+              <script src="js/bootstrap.min.js"></script>
+              <!-- Include all template custom js -->
+              <script src="js/jquery.downCount.js"></script>
+              <script src="js/bootstrap-slider.js"></script>
+              <script src="js/zabuto_calendar.min.js"></script>
+              <script src="js/ekko-lightbox.js"></script>
+              <script src="js/custom.js"></script>
+              <script>
+              if (top.location != location) {
+                top.location.href = document.location.href;
+              }
+              $(function() {
+                window.prettyPrint && prettyPrint();
+                $('#IdDvSl15').slider();
+                var RGBChange = function() {
+                  $('#RGB').css('background', 'rgb(' + r.getValue() + ',' + g.getValue() + ',' + b.getValue() + ')')
+                };
+              });
+              </script>
+</body>
+
+</html>

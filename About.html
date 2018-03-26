@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>RISK FIX</title>
+  <base id="base" runat="server" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="less/slider.less">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimun-scalable=1.0">
+</head>
+
+<body>
+  <style>
+  .divWaiting {
+    position: absolute;
+    background-color: #FAFAFA;
+    z-index: 2147483647 !important;
+    opacity: 0.8;
+    overflow: hidden;
+    text-align: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 20%;
+  }
+  </style>
+  <form id="form1">
+    <div>
+      <header class="barraup">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-xs-12">
+              <div class="">
+              </div>
+              <div class="col-md-1 col-xs-4 flotarder padding1"><a href="/Logout/" title="Logout" Id="aLogout" runat="server" visible="false">Logout</a><a href="/Register/" title="Login" Id="aLogin" runat="server">Login</a></div>
+              <div class="col-md-2 col-xs-8 flotarder padding1 acount"><a href="/Profile/" id="aMiCuenta" runat="server" visible="false">Mi cuenta<i class="fa fa-user"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <header class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="col-md-3 col-sm-4 col-xs-8">
+              <a href="Index.html">  <img src="img/logo.jpg" alt="Risk Fix"></a></div>
+            <div class="col-xs-12 col-sm-8 col-md-5">
+              <div class="option-search-bar">
+                <div class="input-group">
+                  <input name="Encabezado$TxBuscar" type="text" onchange="javascript:setTimeout('__doPostBack(\'Encabezado$TxBuscar\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="Encabezado_TxBuscar" class="form-control" placeholder="Search..."><span class="input-group-btn"> <button class="btn" type="button" id="Buscar"><i class="fa fa-search"></i></button> </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-5 col-xs-8">
+              <a href="http://www.gggi.org" target="_blank" title="GGGI"><img src="img/logos.jpg" alt="GGGI"> </a>
+            </div>
+            <div class="menu_bar">
+              <button type="button" class="navbar-toggle1 collapsed" data-toggle="collapse" data-target="#navbar-1">
+                <span class="sr-only">Menú</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 header-nav animate-dropdown">
+              <div class="menu collapse navbar-collapse" id="navbar-1" aria-expanded="true">
+                <ul>
+                  <li><a href="/Home/" class="c1 c1active" id="aHome" runat="server">INICIO<br> <br></a></li>
+                  <li><a href="About/" class="c2" id="aAbout" runat="server">ACERCA DE<br> <br></a></li>
+                  <li><a href="/Instruments/" class="c3" id="aInstrumentos" runat="server">INSTRUMENTOS<br> <br></a></li>
+                  <li><a href="/Project-Submit/" class="c4" id="aProjectSubmit" runat="server">ACTIVAR MI<br>PROPUESTA</a></li>
+                  <li><a href="/Events/" class="c6" id="aEventos" runat="server">EVENTOS<br> <br></a></li>
+                  <li><a href="/Contact/" class="c7" id="aContacto" runat="server">CONTACTO<br> <br></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- MODAL LEAVE TO PAGE -->
+      <div class="col-md-12">
+        <div class="modal fade in" id="leave" aria-hidden="false" style="display: none;">}
+          <div class="modal-dialog">
+            <div class="col-md-12">
+              <div class="modal-header">
+                <div class="col-md-12 block-pro-1">
+                  <div class="little-blocke"></div>
+                  <div class="form-contact block-pro-contact">
+                    <p>
+                      Ahora saldrá RiskFix y será vinculado a una página externa de otra organización.</p>
+                    <div class="btn-leave col-md-12">
+                      <a href="https://navigator.irena.org/Pages/popupFN.aspx">SÍ</a>&nbsp;&nbsp;&nbsp;
+                      <a href="#" data-dismiss="modal" aria-hidden="true">NO    </a>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- MODAL LEAVE TO PAGE -->
+      <section class="breath-cromble">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <a href="/Home/" title="Home">Inicio</a> /
+              <span>Acerca de</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section style="margin-top: 10px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 col-sm-12 block-about">
+              <div class="block-about">
+                <img src="img/banner-about.jpg" class="img-responsive">
+                <div class="little-blocke" style="margin-top: 5px;"></div>
+                <p style="text-align: justify; margin-top: 22px;padding-left: 4px;padding-right: 13px;">
+                  RiskFix es una herramienta web interactiva que apoya a los pequeños y medianos desarrolladores de proyectos de energías renovables y eficiencia energética, en asegurar las inversiones verdes necesarias para el arranque y la implementación de sus proyectos.
+                  <br />
+                  <br /> RiskFix proporciona ayuda en la solución de los costos de información y desafíos de bancarización asociados con los procesos de toma de decisiones que rigen el flujo de fondos para el clima. A través de proporcionar la información requerida, Riskfix busca facilitar más fácilmente la transición hacia tecnologías de baja emisión de carbono en economías en desarrollo y emergentes.
+                  <br />
+                  <br /> La falta de flujo de capital suficiente hacia países en desarrollo que tienen que hacer frente al cambio climático, no se debe a una falta de recursos financieros climáticos, sino que es más bien el resultado de la estructuración de proyectos financiables que no cumplen con los criterios establecidos por Instituciones Financieras de Desarrollo (IFD) y Bancos Multilaterales de Desarrollo (BMD). Por tanto, estas ineficiencias crean una barrera para el flujo, tanto de capital público como privado hacia tecnologías de baja emisión de carbono.
+                  <br />
+                  <br /> Aunque existe un aumento gradual en flujos del financiación para el clima - Climate Policy Initiative (CPI) [web-link the report] encontró que en 2011/2012 los flujos de financiación para el clima alcanzaron un promedio de aproximadamente USD 359 mil millones - los niveles de los fondos aún no están a la altura del nivel de inversión requerida para limitar el aumento de la temperatura global por debajo de dos grados centígrados. El mundo se enfrenta a un déficit de financiación verde.
+                  <br />
+                  <br /> Aunque investigaciones del CPI muestran que los agentes privados contribuyen a la mayoría de la financiación para el clima, con una inversión total de USD 224 mil millones, esta financiación privada se realizó en países desarrollados. Claramente más financiación para el clima debe fluir hacia las economías emergentes, incluyendo los países con mercados de capitales funcionales y los menos desarrollados.
+                  <br />
+                  <br /> El sector público puede y juega un papel importante que permite la financiación privada a través de incentivos, bajo costo o préstamos a mayor plazo y mecanismos de cobertura de riesgos. Sin embargo, a los inversores y desarrolladores potenciales de proyectos les resulta difícil encontrar información completa, detallada y práctica sobre la gama completa de las coberturas de riesgo disponible.
+                  <br />
+                  <br /> Muchos de los desarrolladores de proyectos que trabajan en este campo son gestores de tamaño pequeño y medio que pueden carecer de los recursos necesarios para evaluar rápidamente la gama de opciones financieras y de mitigación de riesgo, y relacionarlas con sus propios riesgos de desarrollo de proyectos. Además, estos desarrolladores de proyectos pueden no tener la experiencia necesaria y los conocimientos técnicos para preparar una propuesta bancarizable o el acceso directo a las fuentes de financiación para el clima de las cuales pueden obtener apoyo.
+                  <br />
+                  <br /> RiskFix se ha desarrollado para disminuir estas brechas de conocimiento y mejorar la capacidad de los desarrolladores de proyectos para que tomen pasos informados para acceder a la financiación para el clima existente.
+                  <hr>
+                  <a href="http://www.gggi.org" target="_blank"><img src="img/logos.jpg" alt="GGGI" style="margin-left: 97px;"></a>
+                  <br />
+                  <p style="text-align: justify;margin-top: 5px;padding-left: 4px;padding-right: 13px;">The Global Green Growth Institute fue fundada para apoyar y promover un modelo de crecimiento económico conocido como el "crecimiento verde",
+                    <p style="text-align: justify;margin-top: 5px;padding-left: 4px;padding-right: 13px;">The Global Green Growth Institute fue fundada para apoyar y promover un modelo de crecimiento económico conocido como el "crecimiento verde", que se enfoca en los aspectos clave de rendimiento económico como la reducción de la pobreza, la creación de empleo, la inclusión social y sostenibilidad ambiental.
+                      <br />
+                      <br /> Con sede en Seúl, República de Corea, GGGI también tiene representación en varios países socios.
+                      <br />
+                      <br/>
+                      <b>Países miembros:</b> Australia, Camboya, Costa Rica, Dinamarca, Etiopía, Fiji, Guyana, Hungría, Indonesia, Jordania, Kiribati, República de Corea, México, Mongolia, Noruega, Papua Nueva Guinea, Paraguay, Filipinas, Qatar, Ruanda, Senegal, Emiratos árabes Unidos, Reino Unido, Vanuatu, Vietnam
+                      <br />
+                      <br/>
+                      <b>Operaciones:</b> Camboya, China, Colombia, Etiopía, Fiji, India, Indonesia, Jordania, Laos, México, Mongolia, Marruecos, Mozambique, Myanmar, Nepal, Perú, Filipinas, Ruanda, Senegal, Sudáfrica, Tailandia, Uganda Emiratos Árabes Unidos, Vanuatu, Vietnam</p>
+                    <hr>
+                    <a href="http://climatepolicyinitiative.org/" target="_blank"><img src="img/logo-cpi.jpg" style="margin-left: 97px;"></a>
+                    <h5 style="text-align: justify;margin-top: 0px;padding-left: 98px;padding-right: 98px;">Climate Policy Initiative</h5>
+                    <p style="text-align: justify;margin-top: 5px;padding-left: 4px;padding-right: 13px;">Crédito especial a CPI, por el desarrollo de RiskFix y hacerlo una valiosa herramienta para los desarrolladores de proyectos. CPI con su experiencia y conocimiento en análisis de las finanzas energéticas, ha apoyado GGGI en la preparación de la base de datos de los instrumentos y ofrecido dirección y control de calidad de los datos recogidos. </p>
+                    <p>
+                    </p>
+                    <br/>
+                    <div class="heading">
+                      <div class="border-inner">
+                      </div>
+                      <div class="border-onner">
+                      </div>
+                    </div>
+                    <p>
+                    </p>
+                    <p>
+                    </p>
+                  </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </form>
+  <footer class="foot">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="col-md-3" style="margin-bottom: 12px;">
+            <div>
+              <a href="/Sitemap/" style="border-right: #81cf00 2px; border-right-style: solid; padding-right: 17px;margin-bottom: 69px;">Sitemap&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </div>
+            <br />
+            <div>
+              <a href="Terms-RISKFIX_18_Jan_2016.pdf" style="border-right: #81cf00 2px; border-right-style: solid; padding-right: 17px;margin-bottom: 69px;" target="_blank">Disclaimer</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <a href="#"> RiskFix</a>
+            <br>
+            <p>
+              19F Jeongdong Bldg.
+              <br> 21-15 Jeongdong-gil
+              <br> Jung-gu Seoul 04518 Republic of Korea</p>
+          </div>
+          <div class="col-md-3" style="margin-top: 39px;">
+            <p>© 2015 RISKFIX- All rights reserved </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <!-- jQuery (necessary for Bootstrap 's JavaScript plugins) -->
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Include all template custom js -->
+  <script src="js/jquery.downCount.js"></script>
+  <script src="js/bootstrap-slider.js"></script>
+  <script src="js/zabuto_calendar.min.js"></script>
+  <script src="js/ekko-lightbox.js"></script>
+  <script src="js/custom.js"></script>
+  <script>
+  if (top.location != location) {
+    top.location.href = document.location.href;
+  }
+  $(function() {
+    window.prettyPrint && prettyPrint();
+    $('#IdDvSl15').slider();
+    var RGBChange = function() {
+      $('#RGB').css('background', 'rgb(' + r.getValue() + ',' + g.getValue() + ',' + b.getValue() + ')')
+    };
+  });
+  </script>
+</body>
+
+</html>
